@@ -1,0 +1,13 @@
+.validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+.invalid {
+  border: 3px solid #f44336;
+  color: red;
+}
+
+.valid {
+  border: 3px solid #4caf50;
+  color: green;
+}
