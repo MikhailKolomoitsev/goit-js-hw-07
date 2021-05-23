@@ -23,4 +23,3 @@ const makeListElements = images.map(({url, alt}) => {
 
 ulPicker.insertAdjacentHTML('afterbegin', makeListElements)
 
-console.log(elements);

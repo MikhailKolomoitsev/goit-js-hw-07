@@ -15,12 +15,15 @@ function makeRandomRgbColor() {
 
 
 const removeBoxes = () => {
+    // input.value = '';
+    boxes.innerHTML = '';
+}
+const removeBoxesWithValue = () => {
     input.value = '';
     boxes.innerHTML = '';
 }
 
 const createBoxes = () => {
-    
     for (let i = 0; i < input.value; i+=1){
         const baseSize = 30;
         const biggerSize = baseSize + i * 10;
@@ -32,6 +35,6 @@ const createBoxes = () => {
     
     }
 }
-
+input.addEventListener('input', removeBoxes)
 renderBox.addEventListener('click', createBoxes)
-destroyBox.addEventListener('click', removeBoxes)
+destroyBox.addEventListener('click', removeBoxesWithValue)
