@@ -18,10 +18,9 @@ const images = [
 
 const ulPicker = document.querySelector('.gallery');
 const makeListElements = images.map(({url, alt}) => {
-   
-    ulPicker.insertAdjacentHTML('afterbegin', `<li><img src=${url} alt=${alt}></li>`)
-})
+  return `<li><img src=${url} alt=${alt}></li>`;
+}).join('')
+
+ulPicker.insertAdjacentHTML('afterbegin', makeListElements)
 
 console.log(elements);
-
-ulPicker.insertAdjacentHTML('afterbegin', string)

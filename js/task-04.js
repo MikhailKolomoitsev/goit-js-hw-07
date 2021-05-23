@@ -1,6 +1,6 @@
-let btnMinus=document.querySelector('.decrement')
-let btnAdd = document.querySelector('.increment')
-let result = document.querySelector('.value')
+const btnMinus=document.querySelector('.js-decrement')
+const btnAdd = document.querySelector('.js-increment')
+const result = document.querySelector('.js-value')
 
 let value = parseInt(result.textContent)
 
