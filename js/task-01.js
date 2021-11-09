@@ -81,3 +81,20 @@ context, function(не успел придумать за 10 мин)*/
 // Количество элементов: ${item.lastElementChild.children.length}`,
 //     )
 // })
+
+function moveZeroes(nums) {
+    let numZero=0
+    for (let num of nums) {
+        if (num === 0) {
+            numZero+=1
+        }
+    }
+    let addArr = []
+    for (let i = 0; i <= numZero; i++){
+        addArr[i]=0
+    }
+   
+    
+    return nums.filter(el => el !== 0).concat(addArr)
+};
+console.log(moveZeroes([0, 1, 0, 3, 12]))
