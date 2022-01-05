@@ -66,7 +66,7 @@
 context, function(не успел придумать за 10 мин)*/
 
 // function bind(args, context, func) {
-//     return 
+//     return
 // }
 
 
@@ -77,24 +77,53 @@ context, function(не успел придумать за 10 мин)*/
 
 // categories.forEach(item => {
 //      console.log(
-//         `Категория:${item.firstElementChild.textContent}, 
+//         `Категория:${item.firstElementChild.textContent},
 // Количество элементов: ${item.lastElementChild.children.length}`,
 //     )
 // })
 
-function moveZeroes(nums) {
-    let numZero=0
-    for (let num of nums) {
-        if (num === 0) {
-            numZero+=1
-        }
+// function moveZeroes(nums) {
+//     let numZero=0
+//     for (let num of nums) {
+//         if (num === 0) {
+//             numZero+=1
+//         }
+//     }
+//     let addArr = []
+//     for (let i = 0; i <= numZero; i++){
+//         addArr[i]=0
+//     }
+
+
+//     return nums.filter(el => el !== 0).concat(addArr)
+// };
+// console.log(moveZeroes([0, 1, 0, 3, 12]))
+
+const array = [
+    { color: 'white', id: 2 },
+    { color: 'black', id: 3 },
+    { color: 'black', id: 500 }
+];
+
+const result = array.reduce((acc, item) => {
+    if (acc[item.color]) {
+        acc[item.color] = { ...acc[item.color], [`${item.id}`]: item }
+        return acc
+    } else {
+        acc[item.color] = { [`${item.id}`]: item }
+        return acc
     }
-    let addArr = []
-    for (let i = 0; i <= numZero; i++){
-        addArr[i]=0
-    }
-   
-    
-    return nums.filter(el => el !== 0).concat(addArr)
-};
-console.log(moveZeroes([0, 1, 0, 3, 12]))
+}, {});
+
+console.log(result)
+
+// output = {
+//     'white': {
+//         '2': { color: 'white', id: 2 },
+//     },
+//     'black': {
+//         '3': { color: 'black', id: 3 },
+// ‘500’: { color: ‘black’, id: 500 }
+// }
+// }
+
