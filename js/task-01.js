@@ -99,23 +99,23 @@ context, function(не успел придумать за 10 мин)*/
 // };
 // console.log(moveZeroes([0, 1, 0, 3, 12]))
 
-const array = [
-    { color: 'white', id: 2 },
-    { color: 'black', id: 3 },
-    { color: 'black', id: 500 }
-];
+// const array = [
+//     { color: 'white', id: 2 },
+//     { color: 'black', id: 3 },
+//     { color: 'black', id: 500 }
+// ];
 
-const result = array.reduce((acc, item) => {
-    if (acc[item.color]) {
-        acc[item.color] = { ...acc[item.color], [`${item.id}`]: item }
-        return acc
-    } else {
-        acc[item.color] = { [`${item.id}`]: item }
-        return acc
-    }
-}, {});
+// const result = array.reduce((acc, item) => {
+//     if (acc[item.color]) {
+//         acc[item.color] = { ...acc[item.color], [`${item.id}`]: item }
+//         return acc
+//     } else {
+//         acc[item.color] = { [`${item.id}`]: item }
+//         return acc
+//     }
+// }, {});
 
-console.log(result)
+// console.log(result)
 
 // output = {
 //     'white': {
@@ -126,4 +126,6 @@ console.log(result)
 // ‘500’: { color: ‘black’, id: 500 }
 // }
 // }
-
+const errors = {};
+errors.name = 'You forgot your name.';
+console.log(errors);
